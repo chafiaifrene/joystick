@@ -1,0 +1,3 @@
+utilisation de deux canvas superposés pour pouvoir dessiner les deux cercles. 
+
+Manipulation des cercles creer avec canvas on utilisant getElementById pour pouvoir lui appliquer les modifications en prenant en charge la position de la sourie 
