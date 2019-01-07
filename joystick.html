@@ -1,108 +1,19 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test1</title>
-	<style type="text/css">
-
-		#canvas{
-
-			position: absolute;
-			left:0px;
-		}
-
-		#canvas1{
-
-			position: absolute;
-			left: 100px;
-			top:110px;
-
-			transform-origin: center;
-		}
-	</style>
+	<meta charset="utf-8">
+	<title>joystick</title>
+	<script type="text/javascript" src="joystick.js"></script>
+	<link rel="stylesheet" type="text/css" href="joystick.css">
 </head>
-<body onload="draw();">
-	<div>
-<canvas id="canvas" wdith= "300" height="300"></canvas>
-<canvas id="canvas1" width= "100" height="100"></canvas>
-</div>
-<script type="text/javascript">
-
-	function draw(){
-		// canvas reprensente le 1er cercle
-   const canvas = document.getElementById("canvas");
-
-	 //canvas1 reprenste le 2eme cercle
-   const canvas1 = document.getElementById("canvas1");
-
-   // déssiner les cercles a l'aide de beginPath
-    if(canvas.getContext && canvas1.getContext){
-    	var ctx1 = canvas.getContext('2d');
-    	var ctx2 = canvas1.getContext('2d');
-    	ctx1.beginPath();
-    	ctx2.beginPath();
-
-    	ctx1.arc(150, 150, 100, 0, Math.PI * 2, true);
-    	ctx2.arc(50, 50, 50, 0, Math.PI * 2 , true);
-
-    	ctx1.stroke();
-    	ctx2.fill();
-    }
-
-    //la fonction test permet de déclancher l'evenement mousemove avec la fonction showCoords;
-
-		//la fonction showCoords utilise clientX et clientY pour avoir les cordonnées de la souries
-		canvas1.addEventListener("mousedown",test);
-
-    function test(){
-   canvas1.addEventListener("mousemove", showCoords);
-	 //canvas1.removeEventListener("mouseup", test2);
-
- }
-
-   //utilisation de removeEventListener pour supprimer le mousemove
-
-    function test2(){
-   	 canvas1.removeEventListener("mousemove", showCoords);
-	    canvas1.style.top = 110 + "px";
-	    canvas1.style.left = 100 + "px";
-			z = 0;
- }
- function showCoords(event) {
-	 var 	x = event.clientX;
-	 var  y = event.clientY;
-	 var z = 0;
-	  	 var x1 = 0;
-	  canvas.addEventListener("mouseup", test2);
-		canvas1.addEventListener("mouseup", test2);
-		document.addEventListener("mouseup", test2);
-
-		console.log("x1 = " + x1);
+ 
+<body>
 
 
-			 if(x>=125){
+<canvas class="canvas" id="canvas" wdith= "300" height="300"></canvas>
+<canvas class="canvas1" id="canvas1" width= "50" height="50" ></canvas>
 
-			 canvas1.style.left = z + "px";
-		 } else{
-         z -=x;
-			 canvas1.style.left = z + "px";
-		 }
 
-  /*  if(x<167){
-			  z+=x;
-			   if(z>=199)
-			  canvas1.style.left = z + "px";
-		 }else{
-			  z-=x;
-			   if(z<=190)
-			  canvas1.style.left = z + "px";
-		 }  */
-	  // canvas1.style.top = x + "px";
-		 //canvas1.style.left = y + "px";
-
-   console.log("X = " + x + " y = " + y);
-}
-}
-</script>
 </body>
-</html>
+
+</html
