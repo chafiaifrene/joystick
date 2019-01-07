@@ -1,0 +1,4 @@
+
+Mon projet consiste a realisé un joystick tels que nous disposons de deux cercles un plus grand que l'autre .le cercle du centre doit bouger au sens de la souris lors du mouvement "mousemove" et retourner au point de départ lors du mouvement "mouseup".
+mais je n'ai pas pu faire l'objectif final ,j'ai reussi a faire du mouvement sur le petit cercle on délimitant sur le grand.
+Ce que j'ai trop essayé a faire c'est du faire un clique avant de bouger le cercle mais je n'arriva pas a trouver le mouvement qu'il faut.
