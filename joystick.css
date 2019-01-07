@@ -1,0 +1,13 @@
+
+
+#canvas{
+			position: absolute;
+			left:300px;
+			top: 150px;
+		}
+#canvas1{
+			position: absolute;
+			left: 425px;
+			top: 275px;
+			transform-origin: center;
+		}
